@@ -24,9 +24,9 @@
 
     <TextView
         android:id="@+id/textSlogan"
-        android:layout_width="289dp"
-        android:layout_height="86dp"
-        android:fontFamily="@font/poppins_regular"
+        android:layout_width="245dp"
+        android:layout_height="84dp"
+        android:fontFamily="@font/poppins_italic"
         android:text=' " Size is not a number, its a feeling "'
         android:textAlignment="viewEnd"
         android:textAllCaps="false"
@@ -35,8 +35,8 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.696"
+        app:layout_constraintHorizontal_bias="0.795"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.739" />
+        app:layout_constraintVertical_bias="0.738" />
 </androidx.constraintlayout.widget.ConstraintLayout>
