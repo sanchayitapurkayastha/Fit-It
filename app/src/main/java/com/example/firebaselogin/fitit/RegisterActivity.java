@@ -87,7 +87,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 public void onComplete(@NonNull Task<AuthResult> task) {
                                     FirebaseUser user = task.getResult().getUser();
                                     makeUser(registerUser, user.getUid());
-                                    startActivity(new Intent(RegisterActivity.this, splash_screen.class));
+                                    startActivity(new Intent(RegisterActivity.this, Home_page.class));
                                     finish();
                                 }
                             })
