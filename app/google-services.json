@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "532397185615",
+    "project_id": "fit-it-3fd3f",
+    "storage_bucket": "fit-it-3fd3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:532397185615:android:67b96ba2a8766f4542683a",
+        "android_client_info": {
+          "package_name": "com.example.firebaselogin.fitit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "532397185615-gl3gsf48c5umu3kv116h7ve411uo3b1m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAcFVD-OoCNx8H2b0NnY19uDP2EoFYY5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "532397185615-gl3gsf48c5umu3kv116h7ve411uo3b1m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
