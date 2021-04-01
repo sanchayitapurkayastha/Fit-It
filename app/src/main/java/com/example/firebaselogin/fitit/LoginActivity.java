@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void launchMainActivity(String email, String name, String phone){
         Toast.makeText(this, "Please wait....Logging you in", Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(LoginActivity.this, splash_screen.class);
+        Intent intent = new Intent(LoginActivity.this, Home_page.class);
         intent.putExtra("user_name",email);
         intent.putExtra("user_email",name);
         intent.putExtra("user_phone",phone);

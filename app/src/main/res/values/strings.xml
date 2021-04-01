@@ -2,4 +2,12 @@
     <string name="app_name">Fit It</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="amit_shah">Amit Shah</string>
+    <string name="bio">Bio</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="_9129784378">+9129784378</string>
+    <string name="email">Email</string>
+    <string name="myntra_gmail_com">myntra@gmail.com</string>
+    <string name="address">Address</string>
+    <string name="todo">TODO</string>
 </resources>
