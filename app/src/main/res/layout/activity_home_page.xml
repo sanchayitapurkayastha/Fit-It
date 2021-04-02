@@ -44,7 +44,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/home_title"
-                        android:fontFamily="@font/poppins_medium"
+                        android:fontFamily="@font/poppins_regular"
                         android:text="6 Items"
                         android:textColor="#454545"
                         android:textSize="14sp" />
@@ -53,7 +53,7 @@
                         android:layout_width="100dp"
                         android:layout_height="80dp"
                         android:layout_alignParentRight="true"
-                        android:src="@drawable/logo_black" />
+                        android:src="@drawable/logo_transparent" />
                 </RelativeLayout>
 
                 <GridLayout
