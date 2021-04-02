@@ -10,8 +10,8 @@
     <string name="myntra_gmail_com">myntra@gmail.com</string>
     <string name="address">Address</string>
     <string name="todo">TODO</string>
-<!--    boby measurement text-->
-   <string name="measurement_point1">1. Chest/Bust - Measure around the fullest part of the chest/bust. Do not draw the tape too tightly.</string>
+    <!--    boby measurement text-->
+    <string name="measurement_point1">1. Chest/Bust - Measure around the fullest part of the chest/bust. Do not draw the tape too tightly.</string>
     <string name="measurement_point2">2. Center Back Neck–to-Wrist- With arm straight, measure from back base of neck, across shoulder, and along arm to wrist.</string>
     <string name="measurement_point3">3. Back Waist Length- Measure from the most prominent bone at base of neck to the natural waistline.</string>
     <string name="measurement_point4">4. Cross Back- Measure from shoulder to shoulder.</string>
