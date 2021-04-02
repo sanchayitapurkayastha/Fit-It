@@ -61,17 +61,6 @@ public class GuideFragment extends Fragment {
         viewPager=view.findViewById(R.id.onBoardingViewPager);
         layoutOnBoardingIndicators=view.findViewById(R.id.layoutOnBoardingIndicator);
         buttonOnBoardingAction=view.findViewById(R.id.buttonOnBoardingAction);
-//        buttonOnBoardingAction.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if(viewPager.getCurrentItem()+1 < onBoardingAdapter.getItemCount()){
-//                    viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
-//                }else {
-//                    startActivity(new Intent(getActivity().getApplicationContext(), Home_page.class));
-//                    getActivity().finish();
-//                }
-//            }
-//        });
         viewPager.setAdapter(onBoardingAdapter);
         setupOnBoardingItems();
         setOnBoardingIndicators();

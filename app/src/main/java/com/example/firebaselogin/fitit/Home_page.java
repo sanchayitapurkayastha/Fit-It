@@ -36,7 +36,7 @@ public class Home_page extends AppCompatActivity {
                     selectedFragment=new GiftFragment();
                     break;
                 case R.id.nav_guide:
-                    selectedFragment=new GuideFragment();
+                    selectedFragment=new GuidePage2();
                     break;
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();

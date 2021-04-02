@@ -4,212 +4,205 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.core.widget.NestedScrollView>
-
-
+    android:layout_height="match_parent"
+    android:background="#FDEFFF">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout1"
-        android:layout_width="410dp"
-        android:layout_height="341dp"
-        android:layout_marginBottom="400dp"
+        android:id="@+id/constraintLayout"
+        android:layout_width="409dp"
+        android:layout_height="358dp"
+        android:layout_marginBottom="132dp"
         android:background="@drawable/round_shape"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageView
-            android:id="@+id/login_app_icon"
-            android:layout_width="208dp"
-            android:layout_height="126dp"
+            android:id="@+id/logo_profilepage"
+            android:layout_width="202dp"
+            android:layout_height="115dp"
+            android:src="@drawable/logo_fit_it"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.251"
-            app:srcCompat="@drawable/logo_fit_it"
-            android:contentDescription="@string/todo" />
+            app:layout_constraintVertical_bias="0.193" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView1"
-        android:layout_width="348dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="190dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="8dp"
+        android:elevation="@dimen/cardview_compat_inset_shadow"
         app:cardCornerRadius="15dp"
-        app:cardElevation="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/materialCardView2"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="@+id/personName"
-            app:layout_constraintTop_toBottomOf="@+id/personName">
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/personName"
+                android:id="@+id/person_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/poppins_medium"
-                android:text="@string/amit_shah"
-                android:textColor="@color/black"
-                android:textSize="26sp"
-                app:layout_constraintBottom_toTopOf="@+id/bio"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Amit Raj"
+                android:textAlignment="center"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="28sp" />
 
             <TextView
-                android:id="@+id/bio"
-                android:layout_width="245dp"
-                android:layout_height="40dp"
-                android:layout_constraintHorizontal_bias="0.498"
-                android:layout_constraintEnd_toEndOf="parent"
-                android:layout_constraintStart_toStartOf="parent"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/poppins_light"
-                android:text="@string/bio"
+                android:id="@+id/person_bio"
+                android:layout_width="274dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Bio"
                 android:textAlignment="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/personName" />
+                android:textColor="@color/grey"
+                android:textSize="20sp" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView2"
-        android:layout_width="348dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="8dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="@dimen/cardview_compat_inset_shadow"
         app:cardCornerRadius="15dp"
-        app:cardElevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView1">
+        app:layout_constraintTop_toBottomOf="@+id/cardView1">
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/mobile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
+                android:layout_marginBottom="4dp"
                 android:fontFamily="@font/poppins_light"
                 android:text="@string/mobile_number"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.502"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textAlignment="center"
+                android:textColor="#5A5A5A" />
 
             <TextView
                 android:id="@+id/mobile_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="3dp"
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/_9129784378"
                 android:textColor="#373333"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mobile" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
                 android:fontFamily="@font/poppins_light"
                 android:text="@string/email"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mobile_no" />
+                android:textAlignment="center"
+                android:textColor="#5A5A5A" />
 
             <TextView
                 android:id="@+id/email_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="64dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
                 android:fontFamily="@font/poppins_regular"
                 android:text="@string/myntra_gmail_com"
                 android:textColor="#373333"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.503"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/mobile"
-                app:layout_constraintVertical_bias="0.0" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:textSize="20sp" />
 
-    </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView3"
-        android:layout_width="348dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="204dp"
+        android:elevation="@dimen/cardview_compat_inset_shadow"
         app:cardCornerRadius="15dp"
-        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="5dp">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="@string/address"
-                android:textColor="#232323"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.501"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textAlignment="center"
+                android:textColor="@color/dark_purple"
+                android:textSize="18sp" />
 
             <TextView
-                android:layout_width="252dp"
-                android:layout_height="91dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/address"
-                app:layout_constraintVertical_bias="0.36" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.card.MaterialCardView>
+                android:id="@+id/person_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Silchar,Assam Nit Silchar"
+                android:textAlignment="center"
+                android:textColor="#5A5A5A" />
 
 
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="LOG OUT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3"
+        app:layout_constraintVertical_bias="0.357" />
 </androidx.constraintlayout.widget.ConstraintLayout>
