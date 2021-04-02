@@ -355,7 +355,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="#ECCEFF"
+        android:background="#E9A8F4"
+        app:itemIconTint="#530D7E"
         android:elevation="@dimen/cardview_compat_inset_shadow"
         app:menu="@menu/bottom_nav_home_page" />
 </RelativeLayout>
