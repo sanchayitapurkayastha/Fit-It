@@ -36,7 +36,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/poppins_bold"
-                        android:text="@string/my_homepage"
+                        android:text="My Homepage"
                         android:textColor="#292929"
                         android:textSize="22sp" />
 
@@ -53,8 +53,7 @@
                         android:layout_width="100dp"
                         android:layout_height="80dp"
                         android:layout_alignParentRight="true"
-                        android:src="@drawable/logo_black"
-                        android:contentDescription="@string/todo" />
+                        android:src="@drawable/logo_black" />
                 </RelativeLayout>
 
                 <GridLayout
@@ -231,7 +230,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
                                 android:fontFamily="@font/poppins_semibold"
-                                android:text="Shoes"
+                                android:text="Bag"
                                 android:textColor="#6f6f6f"
                                 android:textSize="18sp" />
 
@@ -266,7 +265,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
                                 android:fontFamily="@font/poppins_semibold"
-                                android:text="@string/bottom_wear"
+                                android:text="Bottom Wear"
                                 android:textColor="#6f6f6f"
                                 android:textSize="18sp" />
 
@@ -294,15 +293,14 @@
                             <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:src="@drawable/dashboard_pic_1"
-                                android:contentDescription="@string/todo" />
+                                android:src="@drawable/dashboard_pic_1" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
                                 android:fontFamily="@font/poppins_semibold"
-                                android:text="@string/dress"
+                                android:text="Dress"
                                 android:textColor="#6f6f6f"
                                 android:textSize="18sp" />
 
@@ -330,15 +328,14 @@
                             <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:src="@drawable/dashboard_pic_2"
-                                android:contentDescription="@string/todo" />
+                                android:src="@drawable/dashboard_pic_2" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
                                 android:fontFamily="@font/poppins_semibold"
-                                android:text="@string/t_shirt"
+                                android:text="T-Shirt "
                                 android:textColor="#6f6f6f"
                                 android:textSize="18sp" />
 
