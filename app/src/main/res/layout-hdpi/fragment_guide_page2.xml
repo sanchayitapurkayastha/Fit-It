@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GuidePage2">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="5dp"
+                android:text="Guide"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="5dp"
+                android:text="How To Measure"
+                android:textColor="@color/dark_purple"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="305dp"
+                android:layout_height="388dp"
+                android:layout_gravity="center"
+                android:src="@drawable/measurement_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="3dp"
+                android:text="measurement_point1"
+                android:textColor="#393737"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="3dp"
+                android:text="measurement_point2"
+                android:textColor="#393737"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="3dp"
+                android:text="measurement_point3"
+                android:textColor="#393737"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="3dp"
+                android:text="measurement_point4"
+                android:textColor="#393737"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="3dp"
+                android:text="measurement_point5"
+                android:textColor="#393737"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="3dp"
+                android:text="measurement_point6"
+                android:textColor="#393737"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="3dp"
+                android:text="measurement_point7"
+                android:textColor="#393737"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="3dp"
+                android:text="measurement_point8"
+                android:textColor="#393737"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="3dp"
+                android:text="measurement_point9"
+                android:textColor="#393737"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="3dp"
+                android:text="measurement_point10"
+                android:textColor="#393737"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="3dp"
+                android:text="measurement_point11"
+                android:textColor="#393737"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="YouTube"
+                android:textColor="@color/dark_purple"
+                android:textSize="28dp" />
+
+            <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:padding="8dp"
+                app:autoPlay="false"
+                app:showYouTubeButton="false"
+                app:videoId="KAJP6e49rIc" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

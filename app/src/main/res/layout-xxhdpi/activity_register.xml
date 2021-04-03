@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageViewSignupMan"
+        android:layout_width="178dp"
+        android:layout_height="139dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp"
+        android:src="@drawable/logo_fit_it" />
+
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewSignupMan"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Sign up"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+    <LinearLayout
+        android:id="@+id/textFieldsHolder"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewSignUp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/editTextPersonName"
+            android:layout_width="252dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circular_textfield"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Name"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColorHint="@color/grey" />
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="252dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/circular_textfield"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColorHint="@color/grey" />
+
+        <EditText
+            android:id="@+id/editTextPhoneNumber"
+            android:layout_width="252dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/circular_textfield"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Phone no."
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:textColorHint="@color/grey" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="252dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/circular_textfield"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="@color/grey" />
+
+        <EditText
+            android:id="@+id/editTextConfirmPassword"
+            android:layout_width="252dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/circular_textfield"
+            android:ems="10"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="@color/grey" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/buttonSignUp"
+        android:layout_width="153dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textFieldsHolder"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/circular_textfield"
+        android:fontFamily="@font/poppins_regular"
+        android:text="CREATE"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSignUp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Already have an account ? "
+        android:textColor="@color/grey"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/loginTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonSignUp"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@id/textViewAccount"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Login"
+        android:textColor="@color/dark_purple" />
+
+
+</RelativeLayout>
