@@ -2,7 +2,6 @@ package com.example.firebaselogin.fitit;
 
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -14,32 +13,25 @@ import android.widget.EditText;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+public class WeightFragment extends Fragment {
 
-public class QuestionForItemFragment extends Fragment {
-
-    private Button b1;
-    private TextInputLayout height;
-    public interface FragmentHeightListener{
-    }
-    @Nullable
+    private Button b3;
+    private TextInputLayout weight;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_question_for_item,container,false);
-
-
-        height=(TextInputLayout)view.findViewById(R.id.height);
-        Button b1=view.findViewById(R.id.button1);
-
-
-        b1.setOnClickListener(new View.OnClickListener() {
+        // Inflate the layout for this fragment
+        View view=inflater.inflate(R.layout.fragment_weight,container,false);
+        weight=(TextInputLayout)view.findViewById(R.id.weight);
+        b3=(Button)view.findViewById(R.id.button3);
+        b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container,new AgeFragment());
+                fr.replace(R.id.fragment_container,new SizeAnswer());
                 fr.addToBackStack(null).commit();
             }
         });
-        return view;
+        return  view;
     }
 }

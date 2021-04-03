@@ -24,7 +24,7 @@ public class Home_page extends AppCompatActivity implements View.OnClickListener
         BottomNavigationView bottomNavigationViewHome =findViewById(R.id.bottom_navigation);
         bottomNavigationViewHome.setOnNavigationItemSelectedListener(navListener);
 
-//      getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
+//      getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).addToBackStack(null).commit();
 
         c1=(CardView)findViewById(R.id.card1);
         c2=(CardView)findViewById(R.id.card2);
@@ -57,7 +57,7 @@ public class Home_page extends AppCompatActivity implements View.OnClickListener
                     selectedFragment=new GuidePage2();
                     break;
             }
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).addToBackStack(null).commit();
             return  true;
 
         }
@@ -66,6 +66,6 @@ public class Home_page extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         Fragment selectedFragment= new QuestionForItemFragment();
-         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
+         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).addToBackStack(null).commit();
     }
 }

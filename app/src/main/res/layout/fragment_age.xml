@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/medium_purple"
-    tools:context=".QuestionForItemFragment">
+    tools:context=".AgeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -26,6 +26,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -39,12 +40,12 @@
                     android:layout_marginTop="20dp"
                     app:layout_constraintBottom_toTopOf="@+id/textView"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.496"
+                    app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.531"
+                    app:layout_constraintVertical_bias="0.696"
                     app:lottie_autoPlay="true"
-                    app:lottie_fileName="reddressgirl.json"
+                    app:lottie_fileName="thinking.json"
                     app:lottie_loop="true" />
 
                 <TextView
@@ -52,24 +53,24 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Enter your height?"
-                    android:textColor="#5E5E5E"
+                    android:text="Enter your age?"
+                    android:textColor="#787B7E"
                     android:textSize="30dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.542" />
+                    app:layout_constraintVertical_bias="0.579" />
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/height"
+                    android:id="@+id/age"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="30dp"
-                    android:hint="50 kg"
-                    app:layout_constraintBottom_toTopOf="@+id/button1"
+                    android:hint="23 years"
+                    app:layout_constraintBottom_toTopOf="@+id/button2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView">
@@ -83,14 +84,14 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
-                    android:id="@+id/button1"
+                    android:id="@+id/button2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_semibold"
                     android:text="Continue"
                     android:textAllCaps="false"
                     android:textSize="20sp"
-                    app:cornerRadius="5dp"
+                    app:cornerRadius="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.497"
@@ -99,9 +100,9 @@
                     app:layout_constraintVertical_bias="0.556" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
         </com.google.android.material.card.MaterialCardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/dashboard_bg"
     tools:context=".Home_page">
 
     <FrameLayout
@@ -14,8 +15,7 @@
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/dashboard_bg">
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,6 +71,7 @@
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
+                        android:background="@color/white"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="6dp">
 
@@ -107,6 +108,7 @@
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
+                        android:background="@color/white"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="6dp">
 
@@ -143,6 +145,7 @@
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
+                        android:background="@color/white"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="6dp">
 
@@ -179,6 +182,7 @@
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
+                        android:background="@color/white"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="6dp">
 
@@ -215,6 +219,7 @@
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
+                        android:background="@color/white"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="6dp">
 
@@ -251,6 +256,7 @@
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
+                        android:background="@color/white"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="6dp">
 
@@ -287,6 +293,7 @@
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
+                        android:background="@color/white"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="6dp">
 
@@ -323,6 +330,7 @@
                         android:layout_rowWeight="1"
                         android:layout_columnWeight="1"
                         android:layout_margin="12dp"
+                        android:background="@color/white"
                         app:cardCornerRadius="12dp"
                         app:cardElevation="6dp">
 
@@ -364,7 +372,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:background="#E9A8F4"
-        app:itemIconTint="#530D7E"
         android:elevation="@dimen/cardview_compat_inset_shadow"
+        app:itemIconTint="#530D7E"
         app:menu="@menu/bottom_nav_home_page" />
 </RelativeLayout>

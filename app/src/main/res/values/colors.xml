@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dark_purple">#721AA8</color>
-    <color name="medium_purple">#A359EC</color>
+    <color name="dark_purple">#A359EC</color>
+    <color name="medium_purple">#9C1CBC</color>
     <color name="light_purple">#BA87DA</color>
     <color name="grey">#3C3A3A</color>
     <color name="black">#000000</color>

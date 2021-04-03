@@ -87,28 +87,28 @@ public class GuideFragment extends Fragment {
         return view;
     }
     private void setupOnBoardingItems(){
-        List<OnBoardingItem> onBoardingItem = new ArrayList<>();
-
-        OnBoardingItem one=new OnBoardingItem();
-        one.setTitle("Hello hello");
-        one.setDescription("Bhat Khala!!");
-        one.setImage(R.raw.thinking);
-
-        OnBoardingItem two=new OnBoardingItem();
-        two.setTitle("hi hi");
-        two.setDescription("ki di khala!!");
-        two.setImage(R.raw.reddressgirl);
-
-        OnBoardingItem three=new OnBoardingItem();
-        three.setTitle("ok then xui thake");
-        three.setDescription("tata Good Night!!");
-        three.setImage(R.raw.shop);
-
-        onBoardingItem.add(one);
-        onBoardingItem.add(two);
-        onBoardingItem.add(three);
-
-        onBoardingAdapter = new OnBoardingAdapter(onBoardingItem);
+//        List<OnBoardingItem> onBoardingItem = new ArrayList<>();
+//
+//        OnBoardingItem one=new OnBoardingItem();
+//        one.setTitle("Hello hello");
+//        one.setDescription("Bhat Khala!!");
+//        one.setImage(R.raw.thinking);
+//
+//        OnBoardingItem two=new OnBoardingItem();
+//        two.setTitle("hi hi");
+//        two.setDescription("ki di khala!!");
+//        two.setImage(R.raw.reddressgirl);
+//
+//        OnBoardingItem three=new OnBoardingItem();
+//        three.setTitle("ok then xui thake");
+//        three.setDescription("tata Good Night!!");
+//        three.setImage(R.raw.shop);
+//
+//        onBoardingItem.add(one);
+//        onBoardingItem.add(two);
+//        onBoardingItem.add(three);
+//
+//        onBoardingAdapter = new OnBoardingAdapter(onBoardingItem);
     }
     private   void  setOnBoardingIndicators(){
         ImageView[] indicators= new ImageView[onBoardingAdapter.getItemCount()];
