@@ -10,8 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitIt">
         <activity android:name=".Home_page" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".RegisterActivity"/>
         <activity android:name=".splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

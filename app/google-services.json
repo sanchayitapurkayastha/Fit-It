@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "532397185615",
+    "firebase_url": "https://fit-it-3fd3f-default-rtdb.firebaseio.com",
     "project_id": "fit-it-3fd3f",
     "storage_bucket": "fit-it-3fd3f.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "532397185615-c16439gtpne3k55j3b46fkh3vu9lqn5l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.firebaselogin.fitit",
+            "certificate_hash": "583674c63444d0ca5159a62bc8c32e7d94494241"
+          }
+        },
         {
           "client_id": "532397185615-gl3gsf48c5umu3kv116h7ve411uo3b1m.apps.googleusercontent.com",
           "client_type": 3
