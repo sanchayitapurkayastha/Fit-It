@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home_page">
@@ -65,6 +66,7 @@
                     android:rowCount="3">
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card1"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_rowWeight="1"
@@ -100,6 +102,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card2"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_rowWeight="1"
@@ -135,6 +138,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_rowWeight="1"
@@ -170,6 +174,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_rowWeight="1"
@@ -205,6 +210,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_rowWeight="1"
@@ -240,6 +246,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_rowWeight="1"
@@ -275,6 +282,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card7"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_rowWeight="1"
@@ -310,6 +318,7 @@
                     </com.google.android.material.card.MaterialCardView>
 
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card8"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_rowWeight="1"
@@ -356,7 +365,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:background="#E9A8F4"
-        app:itemIconTint="#530D7E"
         android:elevation="@dimen/cardview_compat_inset_shadow"
+        app:itemIconTint="#530D7E"
         app:menu="@menu/bottom_nav_home_page" />
 </RelativeLayout>
