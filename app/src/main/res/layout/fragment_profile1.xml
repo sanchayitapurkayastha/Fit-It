@@ -60,7 +60,7 @@
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Amit Raj"
                 android:textAlignment="center"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textColor="@color/black"
                 android:textSize="28sp" />
 
             <TextView
@@ -121,7 +121,7 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/email"
+                android:id="@+id/email_signin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

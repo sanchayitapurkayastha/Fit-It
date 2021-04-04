@@ -12,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class splash_screen extends AppCompatActivity {
-
     private static int SPLASH_SCREEN=4000;
     private ImageView img;
     private TextView txt;
