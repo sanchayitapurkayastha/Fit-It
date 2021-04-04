@@ -1,42 +1,33 @@
 {
   "project_info": {
-    "project_number": "532397185615",
-    "firebase_url": "https://fit-it-3fd3f-default-rtdb.firebaseio.com",
-    "project_id": "fit-it-3fd3f",
-    "storage_bucket": "fit-it-3fd3f.appspot.com"
+    "project_number": "1003463005986",
+    "project_id": "fit-it-e861f",
+    "storage_bucket": "fit-it-e861f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:532397185615:android:67b96ba2a8766f4542683a",
+        "mobilesdk_app_id": "1:1003463005986:android:e49732530294f7ca35b77b",
         "android_client_info": {
           "package_name": "com.example.firebaselogin.fitit"
         }
       },
       "oauth_client": [
         {
-          "client_id": "532397185615-c16439gtpne3k55j3b46fkh3vu9lqn5l.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.firebaselogin.fitit",
-            "certificate_hash": "583674c63444d0ca5159a62bc8c32e7d94494241"
-          }
-        },
-        {
-          "client_id": "532397185615-gl3gsf48c5umu3kv116h7ve411uo3b1m.apps.googleusercontent.com",
+          "client_id": "1003463005986-et7822ebqv9mqbtmbg41u8a5cn80m4tr.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCAcFVD-OoCNx8H2b0NnY19uDP2EoFYY5c"
+          "current_key": "AIzaSyAQol09SnLz1O42SGqPsdGhp6VkG3rScPs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "532397185615-gl3gsf48c5umu3kv116h7ve411uo3b1m.apps.googleusercontent.com",
+              "client_id": "1003463005986-et7822ebqv9mqbtmbg41u8a5cn80m4tr.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
