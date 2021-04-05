@@ -1,6 +1,7 @@
 package com.example.firebaselogin.fitit;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -36,6 +37,8 @@ public class Home_page extends AppCompatActivity implements View.OnClickListener
 
         c1.setOnClickListener(this);
         c2.setOnClickListener(this);
+
+
 
 
     }
