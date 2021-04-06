@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -14,17 +15,18 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class Home_page extends AppCompatActivity implements View.OnClickListener {
 
     public CardView c1,c2,c3,c4,c5,c6,c7,c8;
+    Button gift_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        //bottom navigation bar
         BottomNavigationView bottomNavigationViewHome =findViewById(R.id.bottom_navigation);
         bottomNavigationViewHome.setOnNavigationItemSelectedListener(navListener);
 
-//      getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).addToBackStack(null).commit();
+        gift_button=(Button)findViewById(R.id.gift_button);
+
 
         c1= findViewById(R.id.card1);
         c2= findViewById(R.id.card2);
@@ -38,9 +40,6 @@ public class Home_page extends AppCompatActivity implements View.OnClickListener
         c1.setOnClickListener(this);
         c2.setOnClickListener(this);
 
-
-
-
     }
     //Bottom navBar
     @SuppressLint("NonConstantResourceId")
@@ -53,6 +52,7 @@ public class Home_page extends AppCompatActivity implements View.OnClickListener
                 break;
             case R.id.nav_gift:
                 selectedFragment=new GiftFragment();
+
                 break;
             case R.id.nav_guide:
                 selectedFragment=new GuidePage2();
