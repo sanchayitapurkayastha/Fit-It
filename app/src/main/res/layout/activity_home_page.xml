@@ -4,8 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dashboard_bg"
     tools:context=".Home_page">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignBottom="@+id/fragment_container"
+        android:layout_marginBottom="403dp"
+        android:background="@drawable/home_bg" />
 
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -371,7 +377,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:background="#E9A8F4"
+        android:background="#E9D0F8"
         android:elevation="@dimen/cardview_compat_inset_shadow"
         app:itemIconTint="#530D7E"
         app:menu="@menu/bottom_nav_home_page" />
