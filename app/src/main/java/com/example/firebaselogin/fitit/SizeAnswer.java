@@ -1,7 +1,6 @@
 package com.example.firebaselogin.fitit;
 
 import android.content.res.AssetFileDescriptor;
-import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import org.tensorflow.lite.Interpreter;
 
@@ -34,15 +35,27 @@ public class SizeAnswer extends Fragment {
             e.printStackTrace();
         }
 
-        answer = v.findViewById(R.id.answer);
-        Bundle bundle = this.getArguments();
-        String ht = bundle.getString("ht");
-        String wt = bundle.getString("wt");
-        String age = bundle.getString("age");
+        Bundle bundle = getArguments();
+        String ht = bundle.getString("HEIGHT");
+        String wt = bundle.getString("WEIGHT");
+        String age = bundle.getString("AGE");
 
         String[] sizes = {"L" , "M", "S", "XXS" ,"XXL", "XL"};
         int max_index = doInference( wt, age, ht);
+        answer = v.findViewById(R.id.answer);
         answer.setText(sizes[max_index]);
+
+        //passing the size to itemListFragment
+        Bundle b = new Bundle();
+        b.putString("SIZE", sizes[max_index]);
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        ItemListFragment itemListFragment = new ItemListFragment();
+        itemListFragment.setArguments(bundle);
+
+        fragmentTransaction.replace(R.id.fragment_container,itemListFragment );
+        fragmentTransaction.commit();
 
         return v;
     }

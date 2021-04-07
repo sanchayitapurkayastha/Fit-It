@@ -18,13 +18,10 @@ public class GiftFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_giftpage,container,false);
 
         b_gift=(Button)v.findViewById(R.id.gift_button);
-        b_gift.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                FragmentTransaction fr=getFragmentManager().beginTransaction();
-                fr.replace(R.id.fragment_container,new SizeAnswer());
-                fr.addToBackStack(null).commit();
-            }
+        b_gift.setOnClickListener(v1 -> {
+            FragmentTransaction fr=getFragmentManager().beginTransaction();
+            fr.replace(R.id.fragment_container,new GiftListFragment());
+            fr.addToBackStack(null).commit();
         });
 
         return  v;
