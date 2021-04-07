@@ -38,6 +38,10 @@ public class QuestionForItemFragment extends Fragment {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.fragment_container,new AgeFragment());
                 fr.addToBackStack(null).commit();
+                Bundle bundle = new Bundle();
+                bundle.putString("ht", height.getEditText().getText().toString());
+                SizeAnswer fragment = new SizeAnswer();
+                fragment.setArguments(bundle);
             }
         });
         return view;

@@ -1,64 +1,81 @@
 package com.example.firebaselogin.fitit;
 
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SizeAnswer#newInstance} factory method to
- * create an instance of this fragment.
- */
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import org.tensorflow.lite.Interpreter;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
+
 public class SizeAnswer extends Fragment {
+    Interpreter interpreter;
+    TextView answer;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public SizeAnswer() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SizeAnswer.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static SizeAnswer newInstance(String param1, String param2) {
-        SizeAnswer fragment = new SizeAnswer();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
+    @Nullable
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View v = inflater.inflate(R.layout.fragment_size_answer, container, false);
+
+        try {
+            interpreter = new Interpreter(loadModelFile(), null);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
+        answer = v.findViewById(R.id.answer);
+        Bundle bundle = this.getArguments();
+        String ht = bundle.getString("ht");
+        String wt = bundle.getString("wt");
+        String age = bundle.getString("age");
+
+        String[] sizes = {"L" , "M", "S", "XXS" ,"XXL", "XL"};
+        int max_index = doInference( wt, age, ht);
+        answer.setText(sizes[max_index]);
+
+        return v;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_size_answer, container, false);
+    private MappedByteBuffer loadModelFile() throws IOException {
+
+        AssetFileDescriptor assetFileDescriptor = this.getAssets().openFd("clothessizeprediction.tflite");
+        FileInputStream fileInputStream = new FileInputStream((assetFileDescriptor.getFileDescriptor()));
+        FileChannel fileChannel = fileInputStream.getChannel();
+        long startOffSet = assetFileDescriptor.getStartOffset();
+        long length = assetFileDescriptor.getLength();
+        return fileChannel.map(FileChannel.MapMode.READ_ONLY,startOffSet,length);
+    }
+
+    private AssetManager getAssets() {
+        return null;
+    }
+
+
+    public int doInference (String wt, String age, String ht) {
+        float[][] input = new float[1][3];
+        input[0][0] = Float.parseFloat(wt);
+        input[0][1] = Float.parseFloat(age);
+        input[0][2] = Float.parseFloat(ht);
+
+        float[][] output = new float[1][6];
+        interpreter.run(input,output);
+        int maxAt = 0;
+
+        for (int i = 0; i < 6; i++) {
+            maxAt = output[0][i] > output[0][maxAt] ? i : maxAt;
+        }
+        return maxAt;
+
     }
 }

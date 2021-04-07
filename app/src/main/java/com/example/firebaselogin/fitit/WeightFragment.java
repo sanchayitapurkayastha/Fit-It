@@ -30,6 +30,10 @@ public class WeightFragment extends Fragment {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.fragment_container,new SizeAnswer());
                 fr.addToBackStack(null).commit();
+                Bundle bundle = new Bundle();
+                bundle.putString("wt", weight.getEditText().getText().toString());
+                SizeAnswer fragment = new SizeAnswer();
+                fragment.setArguments(bundle);
             }
         });
         return  view;

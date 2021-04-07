@@ -75,6 +75,10 @@ public class AgeFragment extends Fragment {
                 FragmentTransaction fr=getFragmentManager().beginTransaction();
                 fr.replace(R.id.fragment_container,new WeightFragment());
                 fr.addToBackStack(null).commit();
+                Bundle bundle = new Bundle();
+                bundle.putString("age", age.getEditText().getText().toString());
+                SizeAnswer fragment = new SizeAnswer();
+                fragment.setArguments(bundle);
             }
         });
         return  view;

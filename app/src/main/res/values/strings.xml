@@ -9,7 +9,7 @@
     <string name="email">Email</string>
     <string name="myntra_gmail_com">myntra@gmail.com</string>
     <string name="address">Address</string>
-    <string name="todo">TODO</string>
+
     <!--    boby measurement text-->
     <string name="measurement_point1">1. Chest/Bust - Measure around the fullest part of the chest/bust. Do not draw the tape too tightly.</string>
     <string name="measurement_point2">2. Center Back Neck–to-Wrist- With arm straight, measure from back base of neck, across shoulder, and along arm to wrist.</string>
@@ -25,4 +25,9 @@
     <string name="company_name">jfhvkjv</string>
     <string name="size">Size</string>
     <string name="price">Price</string>
+    <string name="my_homepage">My Homepage</string>
+    <string name="_6_items">6 Items</string>
+
+    <string name="t_shirt">T-Shirt</string>
+    <string name="todo">TODO</string>
 </resources>
