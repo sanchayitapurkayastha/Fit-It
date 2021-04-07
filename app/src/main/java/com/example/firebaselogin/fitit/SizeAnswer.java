@@ -49,19 +49,14 @@ public class SizeAnswer extends Fragment {
 
     private MappedByteBuffer loadModelFile() throws IOException {
 
-        AssetFileDescriptor assetFileDescriptor = this.getAssets().openFd("clothessizeprediction.tflite");
+        AssetFileDescriptor assetFileDescriptor = getContext().getAssets().openFd("clothessizeprediction.tflite");
         FileInputStream fileInputStream = new FileInputStream((assetFileDescriptor.getFileDescriptor()));
         FileChannel fileChannel = fileInputStream.getChannel();
         long startOffSet = assetFileDescriptor.getStartOffset();
         long length = assetFileDescriptor.getLength();
         return fileChannel.map(FileChannel.MapMode.READ_ONLY,startOffSet,length);
     }
-
-    private AssetManager getAssets() {
-        return null;
-    }
-
-
+    
     public int doInference (String wt, String age, String ht) {
         float[][] input = new float[1][3];
         input[0][0] = Float.parseFloat(wt);

@@ -42,24 +42,26 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:fontFamily="@font/poppins_bold"
-                        android:text="My Homepage"
+                        android:text="@string/my_homepage"
                         android:textColor="#292929"
-                        android:textSize="22sp" />
+                        android:textSize="22sp"
+                        tools:ignore="RelativeOverlap" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/home_title"
                         android:fontFamily="@font/poppins_medium"
-                        android:text="6 Items"
+                        android:text="@string/_6_items"
                         android:textColor="#454545"
                         android:textSize="14sp" />
 
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="80dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/logo_black" />
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/logo_black"
+                        android:contentDescription="@string/todo" />
                 </RelativeLayout>
 
                 <GridLayout
@@ -70,7 +72,7 @@
                     android:columnOrderPreserved="false"
                     android:rowCount="3">
 
-                    <com.google.android.material.card.MaterialCardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/card1"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
@@ -86,7 +88,8 @@
                             android:layout_height="match_parent"
                             android:gravity="center"
                             android:orientation="vertical"
-                            android:padding="16dp">
+                            android:padding="16dp"
+                            tools:ignore="UseCompoundDrawables">
 
                             <ImageView
                                 android:layout_width="80dp"
@@ -105,9 +108,9 @@
                         </LinearLayout>
 
 
-                    </com.google.android.material.card.MaterialCardView>
+                    </androidx.cardview.widget.CardView>
 
-                    <com.google.android.material.card.MaterialCardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/card2"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
@@ -142,9 +145,9 @@
                         </LinearLayout>
 
 
-                    </com.google.android.material.card.MaterialCardView>
+                    </androidx.cardview.widget.CardView>
 
-                    <com.google.android.material.card.MaterialCardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/card3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -179,9 +182,9 @@
                         </LinearLayout>
 
 
-                    </com.google.android.material.card.MaterialCardView>
+                    </androidx.cardview.widget.CardView>
 
-                    <com.google.android.material.card.MaterialCardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/card4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -216,9 +219,9 @@
                         </LinearLayout>
 
 
-                    </com.google.android.material.card.MaterialCardView>
+                    </androidx.cardview.widget.CardView>
 
-                    <com.google.android.material.card.MaterialCardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/card5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -253,9 +256,9 @@
                         </LinearLayout>
 
 
-                    </com.google.android.material.card.MaterialCardView>
+                    </androidx.cardview.widget.CardView>
 
-                    <com.google.android.material.card.MaterialCardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/card6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -276,7 +279,8 @@
                             <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:src="@drawable/dashboard_pic_6" />
+                                android:src="@drawable/dashboard_pic_6"
+                                android:contentDescription="@string/todo" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -290,9 +294,9 @@
                         </LinearLayout>
 
 
-                    </com.google.android.material.card.MaterialCardView>
+                    </androidx.cardview.widget.CardView>
 
-                    <com.google.android.material.card.MaterialCardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/card7"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
@@ -313,7 +317,8 @@
                             <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:src="@drawable/dashboard_pic_1" />
+                                android:src="@drawable/dashboard_pic_1"
+                                android:contentDescription="TODO" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -327,9 +332,9 @@
                         </LinearLayout>
 
 
-                    </com.google.android.material.card.MaterialCardView>
+                    </androidx.cardview.widget.CardView>
 
-                    <com.google.android.material.card.MaterialCardView
+                    <androidx.cardview.widget.CardView
                         android:id="@+id/card8"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
@@ -350,21 +355,22 @@
                             <ImageView
                                 android:layout_width="80dp"
                                 android:layout_height="80dp"
-                                android:src="@drawable/dashboard_pic_2" />
+                                android:src="@drawable/dashboard_pic_2"
+                                android:contentDescription="TODO" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
                                 android:fontFamily="@font/poppins_semibold"
-                                android:text="T-Shirt "
+                                android:text="@string/t_shirt"
                                 android:textColor="#6f6f6f"
                                 android:textSize="18sp" />
 
                         </LinearLayout>
 
 
-                    </com.google.android.material.card.MaterialCardView>
+                    </androidx.cardview.widget.CardView>
                 </GridLayout>
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
