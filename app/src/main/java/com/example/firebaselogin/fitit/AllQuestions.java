@@ -12,11 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.textfield.TextInputLayout;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the  factory method to
- * create an instance of this fragment.
- */
+
 public class AllQuestions extends Fragment {
 
     public AllQuestions() {
@@ -37,22 +33,26 @@ public class AllQuestions extends Fragment {
         height=(TextInputLayout)view.findViewById(R.id.height);
         age=(TextInputLayout)view.findViewById(R.id.age);
         weight=(TextInputLayout)view.findViewById(R.id.weight);
+
         Button b2 = (Button) view.findViewById(R.id.button2);
         b2.setOnClickListener(v -> {
             FragmentTransaction fr=getFragmentManager().beginTransaction();
             fr.replace(R.id.fragment_container,new SizeAnswer());
             fr.addToBackStack(null).commit();
-//            Bundle bundle = new Bundle();
-//            bundle.putString("AGE", age.getEditText().getText().toString());
-//
-//            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-//
-//            SizeAnswer sizeAnswer = new SizeAnswer();
-//            sizeAnswer.setArguments(bundle);
-//
-//            fragmentTransaction.replace(R.id.fragment_container,sizeAnswer );
-//            fragmentTransaction.commit();
+
+            Bundle bundle = new Bundle();
+            bundle.putString("HEIGHT", height.getEditText().getText().toString());
+            bundle.putString("WEIGHT", weight.getEditText().getText().toString());
+            bundle.putString("AGE", age.getEditText().getText().toString());
+
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+            SizeAnswer sizeAnswer = new SizeAnswer();
+            sizeAnswer.setArguments(bundle);
+
+            fragmentTransaction.replace(R.id.fragment_container,sizeAnswer );
+            fragmentTransaction.commit();
         });
         return  view;
     }
