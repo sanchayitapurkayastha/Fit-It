@@ -37,7 +37,7 @@ public class SizeAnswer extends Fragment {
         }
 
         Bundle bundle = getArguments();
-        assert bundle != null;
+//        assert bundle != null;
         String ht = bundle.getString("HEIGHT");
         String wt = bundle.getString("WEIGHT");
         String age = bundle.getString("AGE");

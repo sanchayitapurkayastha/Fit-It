@@ -13,6 +13,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.util.Objects;
+
 
 public class AllQuestions extends Fragment {
 
@@ -36,21 +38,12 @@ public class AllQuestions extends Fragment {
         weight=(TextInputLayout)view.findViewById(R.id.weight);
 
         Button b2=(Button)view.findViewById(R.id.button2);
-//        b2.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(getActivity(),ProductList.class));
-//            }
-//        });
         b2.setOnClickListener(v -> {
-            FragmentTransaction fr=getFragmentManager().beginTransaction();
-            fr.replace(R.id.fragment_container,new SizeAnswer());
-            fr.addToBackStack(null).commit();
-
+            assert getFragmentManager() !=null;
             Bundle bundle = new Bundle();
-            bundle.putString("HEIGHT", height.getEditText().getText().toString());
-            bundle.putString("WEIGHT", weight.getEditText().getText().toString());
-            bundle.putString("AGE", age.getEditText().getText().toString());
+            bundle.putString("HEIGHT", Objects.requireNonNull(height.getEditText().getText().toString()));
+            bundle.putString("WEIGHT", Objects.requireNonNull(weight.getEditText().getText().toString()));
+            bundle.putString("AGE", Objects.requireNonNull(age.getEditText().getText().toString()));
 
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

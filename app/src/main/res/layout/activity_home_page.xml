@@ -60,8 +60,9 @@
                         android:layout_width="100dp"
                         android:layout_height="80dp"
                         android:layout_alignParentEnd="true"
-                        android:src="@drawable/logo_black"
-                        android:contentDescription="@string/todo" />
+                        android:contentDescription="@string/todo"
+                        android:padding="10dp"
+                        android:src="@drawable/new_logo_darkpurpleblack" />
                 </RelativeLayout>
 
                 <GridLayout
