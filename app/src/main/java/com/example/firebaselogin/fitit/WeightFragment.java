@@ -23,9 +23,9 @@ public class WeightFragment extends Fragment {
         weight=(TextInputLayout)view.findViewById(R.id.weight);
         Button b3 = (Button) view.findViewById(R.id.button3);
         b3.setOnClickListener(v -> {
-            FragmentTransaction fr=getFragmentManager().beginTransaction();
-            fr.replace(R.id.fragment_container,new SizeAnswer());
-            fr.addToBackStack(null).commit();
+//            FragmentTransaction fr=getFragmentManager().beginTransaction();
+//            fr.replace(R.id.fragment_container,new ItemListFragment());
+//            fr.addToBackStack(null).commit();
 
             Bundle bundle = new Bundle();
             bundle.putString("WEIGHT", weight.getEditText().getText().toString());

@@ -1,7 +1,6 @@
 package com.example.firebaselogin.fitit;
 
 import android.annotation.SuppressLint;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -66,7 +65,7 @@ public class Home_page extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
-        Fragment selectedFragment= new QuestionForItemFragment();
+        Fragment selectedFragment= new AllQuestions();
          getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).addToBackStack(null).commit();
     }
 }

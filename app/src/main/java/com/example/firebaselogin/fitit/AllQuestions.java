@@ -17,9 +17,9 @@ import com.google.android.material.textfield.TextInputLayout;
  * Use the  factory method to
  * create an instance of this fragment.
  */
-public class AgeFragment extends Fragment {
+public class AllQuestions extends Fragment {
 
-    public AgeFragment() {
+    public AllQuestions() {
         // Required empty public constructor
     }
 
@@ -29,29 +29,30 @@ public class AgeFragment extends Fragment {
         // TODO: Rename and change types of parameters
     }
 
-    private TextInputLayout age;
+    private TextInputLayout height,age,weight;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_age,container,false);
+        View view=inflater.inflate(R.layout.fragmnet_allquestions,container,false);
+        height=(TextInputLayout)view.findViewById(R.id.height);
         age=(TextInputLayout)view.findViewById(R.id.age);
+        weight=(TextInputLayout)view.findViewById(R.id.weight);
         Button b2 = (Button) view.findViewById(R.id.button2);
         b2.setOnClickListener(v -> {
             FragmentTransaction fr=getFragmentManager().beginTransaction();
-            fr.replace(R.id.fragment_container,new WeightFragment());
+            fr.replace(R.id.fragment_container,new SizeAnswer());
             fr.addToBackStack(null).commit();
-            Bundle bundle = new Bundle();
-            bundle.putString("AGE", age.getEditText().getText().toString());
-
-            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-            SizeAnswer sizeAnswer = new SizeAnswer();
-            sizeAnswer.setArguments(bundle);
-
-            fragmentTransaction.replace(R.id.fragment_container,sizeAnswer );
-            fragmentTransaction.commit();
+//            Bundle bundle = new Bundle();
+//            bundle.putString("AGE", age.getEditText().getText().toString());
+//
+//            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+//            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//
+//            SizeAnswer sizeAnswer = new SizeAnswer();
+//            sizeAnswer.setArguments(bundle);
+//
+//            fragmentTransaction.replace(R.id.fragment_container,sizeAnswer );
+//            fragmentTransaction.commit();
         });
         return  view;
     }

@@ -34,7 +34,7 @@ public class QuestionForItemFragment extends Fragment {
 
         b1.setOnClickListener(v -> {
             FragmentTransaction fr=getFragmentManager().beginTransaction();
-            fr.replace(R.id.fragment_container,new AgeFragment());
+            fr.replace(R.id.fragment_container,new AllQuestions());
             fr.addToBackStack(null).commit();
             Bundle bundle = new Bundle();
             bundle.putString("HEIGHT", height.getEditText().getText().toString());
