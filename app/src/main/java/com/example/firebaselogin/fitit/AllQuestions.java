@@ -1,5 +1,6 @@
 package com.example.firebaselogin.fitit;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +35,13 @@ public class AllQuestions extends Fragment {
         age=(TextInputLayout)view.findViewById(R.id.age);
         weight=(TextInputLayout)view.findViewById(R.id.weight);
 
-        Button b2 = (Button) view.findViewById(R.id.button2);
+        Button b2=(Button)view.findViewById(R.id.button2);
+//        b2.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(getActivity(),ProductList.class));
+//            }
+//        });
         b2.setOnClickListener(v -> {
             FragmentTransaction fr=getFragmentManager().beginTransaction();
             fr.replace(R.id.fragment_container,new SizeAnswer());
@@ -53,6 +60,7 @@ public class AllQuestions extends Fragment {
 
             fragmentTransaction.replace(R.id.fragment_container,sizeAnswer );
             fragmentTransaction.commit();
+
         });
         return  view;
     }

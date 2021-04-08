@@ -51,11 +51,11 @@ public class SizeAnswer extends Fragment {
         FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        ItemListFragment itemListFragment = new ItemListFragment();
-        itemListFragment.setArguments(bundle);
+//        ItemListFragment itemListFragment = new ItemListFragment();
+//        itemListFragment.setArguments(bundle);
 
-        fragmentTransaction.replace(R.id.fragment_container,itemListFragment );
-        fragmentTransaction.commit();
+//        fragmentTransaction.replace(R.id.fragment_container,itemListFragment );
+//        fragmentTransaction.commit();
 
         return v;
     }
