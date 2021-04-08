@@ -1,7 +1,9 @@
 package com.example.firebaselogin.fitit;
 
+import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,8 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import org.tensorflow.lite.Interpreter;
 
@@ -19,6 +19,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
+import java.util.Objects;
 
 public class SizeAnswer extends Fragment {
     Interpreter interpreter;
@@ -36,33 +37,31 @@ public class SizeAnswer extends Fragment {
         }
 
         Bundle bundle = getArguments();
+        assert bundle != null;
         String ht = bundle.getString("HEIGHT");
         String wt = bundle.getString("WEIGHT");
         String age = bundle.getString("AGE");
 
         String[] sizes = {"L" , "M", "S", "XXS" ,"XXL", "XL"};
         int max_index = doInference( wt, age, ht);
+        String size_determined = sizes[max_index];
+
         answer = v.findViewById(R.id.answer);
-        answer.setText(sizes[max_index]);
+        answer.setText(size_determined);
 
-        //passing the size to itemListFragment
-        Bundle b = new Bundle();
-        b.putString("SIZE", sizes[max_index]);
-        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-
-//        ItemListFragment itemListFragment = new ItemListFragment();
-//        itemListFragment.setArguments(bundle);
-
-//        fragmentTransaction.replace(R.id.fragment_container,itemListFragment );
-//        fragmentTransaction.commit();
+        //passing the data to activity
+        new Handler().postDelayed(() -> {
+            Intent intent= new Intent( getActivity(), ProductList.class);
+            intent.putExtra("SIZE",size_determined);
+            startActivity(intent);
+        }, 5000);
 
         return v;
     }
 
     private MappedByteBuffer loadModelFile() throws IOException {
 
-        AssetFileDescriptor assetFileDescriptor = getContext().getAssets().openFd("clothessizeprediction.tflite");
+        AssetFileDescriptor assetFileDescriptor = Objects.requireNonNull(getContext()).getAssets().openFd("clothessizeprediction.tflite");
         FileInputStream fileInputStream = new FileInputStream((assetFileDescriptor.getFileDescriptor()));
         FileChannel fileChannel = fileInputStream.getChannel();
         long startOffSet = assetFileDescriptor.getStartOffset();
